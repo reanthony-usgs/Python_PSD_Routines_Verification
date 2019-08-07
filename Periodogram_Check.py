@@ -42,10 +42,10 @@ font = {'family': 'normal',
 matplotlib.rc('font', **font)
 
 
-net, sta, loc, chan = "IU", "ANMO", "00", "LHZ"
+net, sta, loc, chan = "IU", "ANMO", "00", "BHZ"
 
 # Number of points of windows and overlap for PSD calculations 
-nfft = 1000
+nfft = 100000
 windlap = 0.
 # This is defining my boxcar window for mlab CSD
 My_Window = np.ones(nfft);
@@ -72,10 +72,10 @@ st_FFT = st.copy()
 
 ####### Option - Triming Timeseries ####################################
 # same number of points as nfft
-# etime = stime + T - (1*st[0].stats.delta) 
+etime = stime + T - (1*st[0].stats.delta) 
 
 #6 hour window 
-etime = UTCDateTime("2015-206T06:00:00")
+#etime = UTCDateTime("2015-206T06:00:00")
 
 ########## End Option ################################################## 
 
